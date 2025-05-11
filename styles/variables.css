@@ -1,1 +1,23 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+    --main-font-family: 'Inter-Variable';
+    --accent-font-family: 'PressStart2P';
+    --weight-card-text: 400;
+    --weight-card-title: 700;
+    --accent-font-color: #000;
+    --btn-accent-font-color: #fff;
+    --accent-color: #000;
+    --contour-color: #000;
+    --animation-fill-color: red;
+    --sparks-color: red;
+    --bg-color: #fff;
+    --btn-bg-clr: #fff;
+    --color-txt-strk: #fff;
+    --bg-image: 
+    repeating-linear-gradient(90deg, #d3d3d3 0 2px, rgb(0 0 0 / 0) 2px 4px),
+    repeating-linear-gradient(180deg, #d3d3d3 0 2px, rgb(0 0 0 / 0) 2px 4px),
+    linear-gradient(180deg, #e7e7e7 0%, #e7e7e7 0.01%, #1a1a1a 100%);
+    --hdr-inline-size: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
+    --hdr-block-size: clamp(20.4375rem, 19.5352rem + 3.8498vw, 23rem);
+    --crd-inline-size: clamp(23.4375rem, 16.3072rem + 30.4225vw, 43.6875rem);
+}
