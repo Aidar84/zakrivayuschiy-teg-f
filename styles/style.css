@@ -28,11 +28,10 @@
   display: grid;
   justify-content: center;
   background-color: inherit;
-  font-family: var(--accent-font-family), sans-serif;
+  font-family: var(--accent-font-family), 'fantasy', sans-serif;
   margin-block-start: 100px;
   margin-block-end: 100px;
   inline-size: var(--hdr-inline-size);
-  block-size: var(--hdr-block-size);
   padding: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem);
   border: 2px solid var(--accent-color);
 }
@@ -77,28 +76,27 @@
   border-block-end: 2px solid var(--accent-color);
 }
 
-@supports((text-stroke: 1px var(--color-txt-strk)) or (-webkit-text-stroke: 1px var(--color-txt-strk))) {
-  .watermark {
-    -webkit-text-stroke: 1px var(--color-txt-strk);
-    text-stroke: 1px var(--color-txt-strk);
-    text-shadow: 1px var(--color-txt-strk);
-  }
-}
-
 .image-container {
   position: relative;
 }
 
 .watermark {
   position: absolute;
-  font-family: var(--accent-font-family), sans-serif;
+  font-family: var(--accent-font-family),'fantasy', sans-serif;
   font-size: 14px;
   inset-block-start: 25px;
   inset-inline-end: 25px;
-  -webkit-text-stroke: 1px var(--color-txt-strk);
+  text-shadow: 1px var(--color-txt-strk);
   mix-blend-mode: hard-light;
   opacity: 0.5;
   z-index: 1;
+}
+
+@supports((text-stroke: 1px var(--color-txt-strk)) or (-webkit-text-stroke: 1px var(--color-txt-strk))) {
+  .watermark {
+    -webkit-text-stroke: 1px var(--color-txt-strk);
+    text-stroke: 1px var(--color-txt-strk);
+  }
 }
 
 .picture {
@@ -145,13 +143,7 @@
 
 .card__description {
   font-size: 18px;
-  padding: 26px 22px 26px 24px;
-  line-height: 21px;
-}
-
-.card__memories {
-  font-size: 18px;
-  padding: 1px 25px 25px 24px;
+  padding: 26px 22px 2px 24px;
   line-height: 21px;
 }
 
@@ -162,6 +154,7 @@
   gap: 5px;
   padding-inline-end: 24px;
   padding-block-end: 25px;
+  margin-block-start: 24px;
 }
 
 .button {
@@ -171,10 +164,11 @@
   appearance: none;
   overflow: hidden;
   background-color: var(--btn-bg-clr, #fff);
-  font-family: var(--accent-font-family);
+  font-family: var(--accent-font-family),'fantasy', sans-serif;
   font-size: 14px;
   cursor: pointer;
   border: 2px solid var(--accent-color);
+  transition: box-shadow 0.3s ease;
 }
 
 .button:focus {
@@ -196,7 +190,6 @@
 
 .button:focus-visible {
   box-shadow: 2px 2px var(--accent-color);
-  transition: box-shadow 0.3s ease;
 }
 
 .card__icon-button {
@@ -207,7 +200,7 @@
   background-color: transparent;
   cursor: pointer;
   justify-content: center;
-  padding-block-start: 4px;
+  align-content: center;
 }
 
 .card__icon-button:focus {
@@ -216,7 +209,6 @@
 
 .card__icon-button:focus-visible {
   border: 2px solid var(--accent-color);
-  transition: 0.3s ease;
 }
 
 .sparks {
@@ -298,11 +290,10 @@
   justify-content: center;
   align-items: center;
   gap: 8px;
-  color: var(--btn-bg-clr, #fff);
+  color: var(--btn-accent-font-color, #fff);
   padding: 15px 21px 15px 21px;
   margin-block-start: 50px;
   margin-block-end: 100px;
-  mix-blend-mode: difference;
   outline: none;
 }
 
@@ -328,7 +319,7 @@
 }
 
 .popup__text {
-  font-family: var(--accent-font-family), sans-serif;
+  font-family: var(--accent-font-family),'fantasy', sans-serif;
   font-size: 14px;
   line-height: 150%;
   text-transform: uppercase;
